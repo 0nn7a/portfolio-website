@@ -1,0 +1,41 @@
+:root {
+  --p-basic-backgroud: #ffffff;
+  --p-basic-text: #1d1e32;
+
+  --p-primary-color: #0062ff;
+  --p-primary-text: #1d1e32;
+
+  --p-secondary-color: #38bbff;
+  --p-secondary-text: #7e8ca0;
+
+  --p-gray-1: #f3f3f7;
+  --p-gray-2: #efeff5;
+  --p-gray-3: #dbdce6;
+  --p-gray-4: #c0c2d2;
+  --p-gray-5: #a0a6b9;
+  --p-gray-6: #6c7387;
+}
+:root[theme="dark"] {
+  --p-basic-backgroud: #242428;
+  --p-basic-text: #ececf5;
+
+  --p-primary-color: #0d88ff;
+  --p-primary-text: #ececf5;
+
+  --p-secondary-color: #67cbff;
+  --p-secondary-text: #7e8ca0;
+
+  --p-gray-1: #2f3137;
+  --p-gray-2: #44444b;
+  --p-gray-3: #5a5c64;
+  --p-gray-4: #81838c;
+  --p-gray-5: #a6a7b4;
+  --p-gray-6: #c1c3ce;
+}
+
+// Break Point
+$bp-xs: 425px;
+$bp-sm: 735px;
+$bp-md: 900px;
+$bp-lg: 1200px;
+$bp-xl: 1600px;
