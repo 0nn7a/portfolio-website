@@ -3,6 +3,19 @@
   background: var(--p-secondary-text);
 }
 
+:root {
+  cursor: url("/src/assets/images/cursor-default.png"), default;
+  a {
+    cursor: url("/src/assets/images/cursor-pointer.png"), pointer;
+  }
+}
+:root[theme="dark"] {
+  cursor: url("/src/assets/images/cursor-default-light.png"), default;
+  a {
+    cursor: url("/src/assets/images/cursor-pointer-light.png"), pointer;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -24,7 +37,6 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url("/src/assets/images/cursor-default.png"), default;
 }
 #app {
   position: relative;
@@ -60,7 +72,6 @@ a {
   font-size: inherit;
   font-weight: inherit;
   text-decoration: none;
-  cursor: url("/src/assets/images/cursor-pointer.png"), pointer;
 }
 hr {
   border: none;
