@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="pc__title">
-      <h3 class="heading-3">Desktop</h3>
+      <h4 class="heading-4">Desktop</h4>
     </div>
 
     <div class="rwd__item">
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="tab__title">
-      <h3 class="heading-3">Tab</h3>
+      <h4 class="heading-4">Tab</h4>
     </div>
 
     <div class="rwd__item">
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="phone__title">
-      <h3 class="heading-3">Phone</h3>
+      <h4 class="heading-4">Phone</h4>
     </div>
   </section>
 </template>
@@ -57,7 +57,7 @@
 <style lang="scss" scoped>
 @import "/src/assets/css/variable";
 
-.heading-3 {
+.heading-4 {
   color: var(--p-gray-6);
 }
 

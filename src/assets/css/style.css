@@ -1,4 +1,6 @@
 :root {
+  --p-pin-light: #fff;
+  --p-pin-dark: #000;
   --p-basic-backgroud: #ffffff;
   --p-basic-text: #1d1e32;
   --p-primary-color: #0062ff;
@@ -16,11 +18,11 @@
 :root[theme=dark] {
   --p-basic-backgroud: #242428;
   --p-basic-text: #ececf5;
-  --p-primary-color: #0d88ff;
+  --p-primary-color: #1e9bff;
   --p-primary-text: #ececf5;
-  --p-secondary-color: #67cbff;
+  --p-secondary-color: #4bc0ff;
   --p-secondary-text: #7e8ca0;
-  --p-gray-1: #2f3137;
+  --p-gray-1: #32343a;
   --p-gray-2: #44444b;
   --p-gray-3: #5a5c64;
   --p-gray-4: #81838c;
@@ -39,6 +41,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: inherit;
 }
 
 html {
@@ -53,6 +56,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: url("/src/assets/images/cursor-default.png"), default;
 }
 
 #app {
@@ -91,6 +95,7 @@ a {
   font-size: inherit;
   font-weight: inherit;
   text-decoration: none;
+  cursor: url("/src/assets/images/cursor-pointer.png"), pointer;
 }
 
 hr {
@@ -104,6 +109,10 @@ hr {
   color: var(--p-primary-text);
 }
 .heading-3 {
+  font-size: 1.6rem;
+  color: var(--p-primary-text);
+}
+.heading-4 {
   font-size: 1.4rem;
   color: var(--p-primary-text);
 }

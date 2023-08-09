@@ -9,6 +9,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: inherit;
 }
 
 html {
@@ -23,6 +24,7 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: url("/src/assets/images/cursor-default.png"), default;
 }
 #app {
   position: relative;
@@ -58,6 +60,7 @@ a {
   font-size: inherit;
   font-weight: inherit;
   text-decoration: none;
+  cursor: url("/src/assets/images/cursor-pointer.png"), pointer;
 }
 hr {
   border: none;
