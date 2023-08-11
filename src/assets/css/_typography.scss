@@ -4,6 +4,7 @@
   }
   &-2 {
     font-size: 2.2rem;
+    letter-spacing: 0.02em;
     color: var(--p-primary-text);
   }
   &-3 {
@@ -15,8 +16,109 @@
     color: var(--p-primary-text);
   }
 }
+
+// SUB-TEXT
 .description {
   font-size: 1.2rem;
   font-weight: 500;
+  text-align: left;
+  letter-spacing: 0.05em;
   color: var(--p-secondary-text);
+}
+.remark-text {
+  position: relative;
+  display: block;
+  padding-left: 1em;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--p-secondary-text);
+  &::before {
+    content: "※";
+    position: absolute;
+    top: -5%;
+    left: 0;
+  }
+}
+
+// POPOVER
+%popover-basic {
+  position: absolute;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--p-gray-6);
+  background-color: var(--p-basic-backgroud);
+  border: 1px solid var(--p-gray-3);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-out 0.2s;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--p-basic-backgroud);
+    border-radius: 0.2rem;
+    border-top: 1px solid var(--p-gray-3);
+    border-left: 1px solid var(--p-gray-3);
+  }
+}
+.popover-up {
+  @extend %popover-basic;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 1rem));
+  &::before {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+}
+.popover-up-right {
+  @extend %popover-basic;
+  top: 0;
+  left: 100%;
+  text-align: left;
+  transform: translate(1rem, calc(-100% + 3.3rem));
+  &::before {
+    top: 100%;
+    left: 0;
+    transform: translate(-50%, -300%) rotate(-45deg);
+  }
+}
+.popover-down {
+  @extend %popover-basic;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  &::before {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+.popover-down-left {
+  @extend %popover-basic;
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 1rem), -50%);
+  &::before {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+.popover-left {
+  @extend %popover-basic;
+  top: 0;
+  left: 0;
+  transform: translate(-110%, 0);
+  &::before {
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%) rotate(135deg);
+  }
 }

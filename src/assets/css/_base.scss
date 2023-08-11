@@ -30,7 +30,8 @@ html {
   max-width: 100vw;
   overflow: hidden;
   line-height: 1.5;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Rubik", "Noto Sans TC", Inter, Avenir, Helvetica, Arial,
+    sans-serif;
   font-size: calc(10 / 16 * 100%); //1rem = 10px
   font-weight: 600;
   font-synthesis: none;
@@ -70,8 +71,11 @@ li {
 }
 a {
   font-size: inherit;
-  font-weight: inherit;
   text-decoration: none;
+  letter-spacing: 0.02em;
+}
+button {
+  border: none;
 }
 hr {
   border: none;

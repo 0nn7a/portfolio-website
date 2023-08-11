@@ -1,8 +1,7 @@
 <script setup></script>
 
 <template>
-  <HeaderBar />
-  <router-view></router-view>
+  <ColorTest />
 </template>
 
 <style lang="scss" scoped>

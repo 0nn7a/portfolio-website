@@ -63,7 +63,6 @@
 
 .rwd {
   &__container {
-    padding: 5rem;
     display: grid;
     grid-template-rows: max-content 1fr max-content;
     grid-template-columns: repeat(3, max-content);

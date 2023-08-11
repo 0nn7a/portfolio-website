@@ -7,12 +7,14 @@
 
   --p-primary-color: #0062ff;
   --p-primary-text: #1d1e32;
+  --p-primary-lighter: #e8efff;
+  --p-primary-light: #d1e0ff;
 
   --p-secondary-color: #38bbff;
   --p-secondary-text: #7e8ca0;
 
   --p-gray-1: #f3f3f7;
-  --p-gray-2: #efeff5;
+  --p-gray-2: #e5e5ea;
   --p-gray-3: #dbdce6;
   --p-gray-4: #c0c2d2;
   --p-gray-5: #a0a6b9;
@@ -24,6 +26,8 @@
 
   --p-primary-color: #1e9bff;
   --p-primary-text: #ececf5;
+  --p-primary-lighter: #2e395b;
+  --p-primary-light: #243d6e;
 
   --p-secondary-color: #4bc0ff;
   --p-secondary-text: #7e8ca0;
@@ -35,10 +39,3 @@
   --p-gray-5: #a6a7b4;
   --p-gray-6: #c1c3ce;
 }
-
-// Break Point
-$bp-xs: 425px;
-$bp-sm: 735px;
-$bp-md: 900px;
-$bp-lg: 1200px;
-$bp-xl: 1600px;

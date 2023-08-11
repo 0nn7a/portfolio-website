@@ -9,7 +9,12 @@ declare module 'vue' {
   export interface GlobalComponents {
     ColorTest: typeof import('./src/layouts/ColorTest.vue')['default']
     HeaderBar: typeof import('./src/layouts/HeaderBar.vue')['default']
-    RwdView: typeof import('./src/views/RwdView.vue')['default']
+    HomePage: typeof import('./src/views/HomePage.vue')['default']
+    QuotePage: typeof import('./src/views/QuotePage.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    RwdPage: typeof import('./src/views/RwdPage.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon.vue')['default']
+    TableCompare: typeof import('./src/components/TableCompare.vue')['default']
   }
 }

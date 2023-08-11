@@ -33,14 +33,18 @@ const toggleMode = () => {
       <span></span>
       <span></span>
     </div>
+
+    <hr />
   </section>
-  <hr />
 </template>
 
 <style lang="scss" scoped>
 @import "/src/assets/css/variable";
 
 section {
+  grid-column: full-s / full-e;
+  padding: 5rem 0;
+
   display: flex;
   flex-direction: column;
 }

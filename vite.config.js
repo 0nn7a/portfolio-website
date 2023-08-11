@@ -8,7 +8,7 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/portfolio-website/",
+  base: process.env.NODE_ENV === "production" ? "/portfolio-website/" : "./",
   plugins: [
     vue(),
     AutoImport({
