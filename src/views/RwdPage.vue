@@ -19,9 +19,9 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="pc__title">
-      <h4 class="heading-4">Desktop</h4>
+      <div class="pc__title">
+        <h4 class="heading-4">Desktop</h4>
+      </div>
     </div>
 
     <div class="rwd__item">
@@ -33,9 +33,9 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="tab__title">
-      <h4 class="heading-4">Tab</h4>
+      <div class="tab__title">
+        <h4 class="heading-4">Tab</h4>
+      </div>
     </div>
 
     <div class="rwd__item">
@@ -47,15 +47,16 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="phone__title">
-      <h4 class="heading-4">Phone</h4>
+      <div class="phone__title">
+        <h4 class="heading-4">Phone</h4>
+      </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
 @import "/src/assets/css/variable";
+@import "/src/assets/css/mixin";
 
 .heading-4 {
   color: var(--p-gray-6);
@@ -68,6 +69,10 @@
     grid-template-columns: repeat(3, max-content);
     align-items: flex-end;
     gap: 0.8rem 2rem;
+    @include respond(655px) {
+      grid-template-rows: repeat(4, max-content);
+      grid-template-columns: max-content;
+    }
   }
   &__title {
     grid-row: 1 / span 1;
@@ -80,6 +85,10 @@
   }
   &__item {
     grid-row: 2 / span 1;
+    @include respond(655px) {
+      grid-row: auto;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,12 +155,6 @@
     grid-template-columns: repeat(3, 5rem);
     gap: 1rem;
   }
-  &__title {
-    padding-left: 0.5rem;
-
-    grid-row: 3 / span 1;
-    grid-column: 1 / span 1;
-  }
 }
 
 .tab {
@@ -170,12 +173,6 @@
     .fake__square {
       height: 4rem;
     }
-  }
-  &__title {
-    padding-left: 0.5rem;
-
-    grid-row: 3 / span 1;
-    grid-column: 2 / span 1;
   }
 }
 
@@ -196,11 +193,6 @@
     .fake__square {
       height: 3rem;
     }
-  }
-  &__title {
-    padding-left: 0.5rem;
-    grid-row: 3 / span 1;
-    grid-column: 3 / span 1;
   }
 }
 </style>

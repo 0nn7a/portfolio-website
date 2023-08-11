@@ -134,7 +134,7 @@ button {
 
 hr {
   border: none;
-  border-top: 1px solid var(--p-secondary-text);
+  border-top: 1px solid var(--p-gray-3);
   opacity: 0.5;
 }
 
@@ -153,12 +153,27 @@ hr {
     grid-template-columns: [full-s] 6rem [col-s] 1fr [col-e] 6rem [full-e];
   }
 }
+@media only screen and (max-width: tab-land) {
+  #app {
+    grid-template-columns: [full-s] 6rem [col-s] 1fr [col-e] 6rem [full-e];
+  }
+}
 @media only screen and (max-width: 800px) {
   #app {
     grid-template-columns: [full-s] 4rem [col-s] 1fr [col-e] 4rem [full-e];
   }
 }
+@media only screen and (max-width: tab-port) {
+  #app {
+    grid-template-columns: [full-s] 4rem [col-s] 1fr [col-e] 4rem [full-e];
+  }
+}
 @media only screen and (max-width: 425px) {
+  #app {
+    grid-template-columns: [full-s] 2rem [col-s] 1fr [col-e] 2rem [full-e];
+  }
+}
+@media only screen and (max-width: phone) {
   #app {
     grid-template-columns: [full-s] 2rem [col-s] 1fr [col-e] 2rem [full-e];
   }
@@ -180,12 +195,27 @@ hr {
     padding: 3rem 6rem;
   }
 }
+@media only screen and (max-width: tab-land) {
+  .header__container {
+    padding: 3rem 6rem;
+  }
+}
 @media only screen and (max-width: 800px) {
   .header__container {
     padding: 3rem 4rem;
   }
 }
+@media only screen and (max-width: tab-port) {
+  .header__container {
+    padding: 3rem 4rem;
+  }
+}
 @media only screen and (max-width: 425px) {
+  .header__container {
+    padding: 3rem 2rem;
+  }
+}
+@media only screen and (max-width: phone) {
   .header__container {
     padding: 3rem 2rem;
   }
@@ -204,32 +234,221 @@ hr {
 }
 
 .heading-2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   letter-spacing: 0.02em;
   color: var(--p-primary-text);
 }
+@media only screen and (min-width: 1600px) {
+  .heading-2 {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .heading-2 {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: tab-land) {
+  .heading-2 {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .heading-2 {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .heading-2 {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .heading-2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: phone) {
+  .heading-2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .heading-2 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: mini-phone) {
+  .heading-2 {
+    font-size: 1.8rem;
+  }
+}
 .heading-3 {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   color: var(--p-primary-text);
 }
+@media only screen and (min-width: 1600px) {
+  .heading-3 {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .heading-3 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: tab-land) {
+  .heading-3 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .heading-3 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .heading-3 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .heading-3 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: mini-phone) {
+  .heading-3 {
+    font-size: 1.6rem;
+  }
+}
 .heading-4 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: var(--p-primary-text);
+}
+@media only screen and (min-width: 1600px) {
+  .heading-4 {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .heading-4 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: tab-land) {
+  .heading-4 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .heading-4 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .heading-4 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .heading-4 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: mini-phone) {
+  .heading-4 {
+    font-size: 1.2rem;
+  }
 }
 
 .description {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  text-align: left;
+  text-align: justify;
   letter-spacing: 0.05em;
   color: var(--p-secondary-text);
+}
+@media only screen and (min-width: 1600px) {
+  .description {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .description {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: tab-land) {
+  .description {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .description {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .description {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .description {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: mini-phone) {
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+.popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  font-size: 1.3rem;
+}
+@media only screen and (min-width: 1600px) {
+  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: tab-land) {
+  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: mini-phone) {
+  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+    font-size: 1rem;
+  }
 }
 
 .remark-text {
   position: relative;
   display: block;
   padding-left: 1em;
-  font-size: 1.1rem;
+  text-align: justify;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--p-secondary-text);
@@ -245,7 +464,6 @@ hr {
   position: absolute;
   z-index: 10;
   padding: 0.75rem 1rem;
-  font-size: 1rem;
   font-weight: 500;
   text-align: center;
   white-space: nowrap;

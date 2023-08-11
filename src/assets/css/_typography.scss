@@ -3,33 +3,102 @@
   &-1 {
   }
   &-2 {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     letter-spacing: 0.02em;
     color: var(--p-primary-text);
+    @include respond(big-desktop) {
+      font-size: 3.2rem;
+    }
+    @include respond(tab-land) {
+      font-size: 2.4rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2.2rem;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+    @include respond(mini-phone) {
+      font-size: 1.8rem;
+    }
   }
   &-3 {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     color: var(--p-primary-text);
+    @include respond(big-desktop) {
+      font-size: 2.8rem;
+    }
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+    @include respond(mini-phone) {
+      font-size: 1.6rem;
+    }
   }
   &-4 {
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: var(--p-primary-text);
+    @include respond(big-desktop) {
+      font-size: 2.2rem;
+    }
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.4rem;
+    }
+    @include respond(mini-phone) {
+      font-size: 1.2rem;
+    }
   }
 }
 
 // SUB-TEXT
 .description {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
-  text-align: left;
+  text-align: justify;
   letter-spacing: 0.05em;
   color: var(--p-secondary-text);
+  @include respond(big-desktop) {
+    font-size: 1.6rem;
+  }
+  @include respond(tab-land) {
+    font-size: 1.3rem;
+  }
+  @include respond(tab-port) {
+    font-size: 1.2rem;
+  }
+  @include respond(mini-phone) {
+    font-size: 1.1rem;
+  }
 }
+
+%remark-basic {
+  font-size: 1.3rem;
+  @include respond(big-desktop) {
+    font-size: 1.4rem;
+  }
+  @include respond(tab-land) {
+    font-size: 1.2rem;
+  }
+  @include respond(tab-port) {
+    font-size: 1.1rem;
+  }
+  @include respond(mini-phone) {
+    font-size: 1rem;
+  }
+}
+
 .remark-text {
+  @extend %remark-basic;
   position: relative;
   display: block;
   padding-left: 1em;
-  font-size: 1.1rem;
+  text-align: justify;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--p-secondary-text);
@@ -43,10 +112,10 @@
 
 // POPOVER
 %popover-basic {
+  @extend %remark-basic;
   position: absolute;
   z-index: 10;
   padding: 0.75rem 1rem;
-  font-size: 1rem;
   font-weight: 500;
   text-align: center;
   white-space: nowrap;

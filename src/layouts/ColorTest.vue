@@ -14,15 +14,15 @@ const toggleMode = () => {
 <template>
   <section>
     <div>
+      <button type="button" @click="toggleMode">
+        {{ modeType }} Mode
+        <SvgIcon icon-name="arrow-up-right" :icon-style="null" />
+      </button>
       <h2>basic-text</h2>
       <h2>primary-color</h2>
       <h2>primary-text</h2>
       <h2>secondary-color</h2>
       <h2>secondary-text</h2>
-      <button type="button" @click="toggleMode">
-        {{ modeType }} Mode
-        <SvgIcon icon-name="arrow-up-right" :icon-style="null" />
-      </button>
     </div>
     <div>
       <span></span>
@@ -51,6 +51,7 @@ section {
 div {
   padding: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;

@@ -41,7 +41,7 @@
       </a>
     </nav>
 
-    <input id="menu" type="checkbox" class="header__checkbox" />
+    <input ref="checkDom" id="menu" type="checkbox" class="header__checkbox" />
     <label for="menu" class="header__btn">
       <SvgIcon
         icon-name="menu"
@@ -95,7 +95,7 @@
 %link-basic {
   position: relative;
   color: var(--p-basic-text);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   padding: 0.6rem 1.2rem;
   border-radius: 0.35rem;
@@ -104,18 +104,18 @@
   &:hover,
   &:active {
     overflow: visible;
-    .popover-down,
-    .popover-down-left {
+    [class^="popover-"] {
       opacity: 1;
     }
   }
-  .popover-down {
-    left: 100%;
-    transform: translate(-100%, 20%);
+  [class^="popover-"] {
     opacity: 0;
   }
-  .popover-down-left {
-    opacity: 0;
+  @include respond(big-desktop) {
+    font-size: 1.8rem;
+  }
+  @include respond(tab-land) {
+    font-size: 1.4rem;
   }
 }
 
@@ -180,8 +180,8 @@
     display: none;
     height: 3.2rem;
     width: 3.2rem;
-    background-color: var(--p-gray-2);
     fill: var(--p-basic-text);
+    background-color: var(--p-gray-2);
     border-radius: 0.5rem;
     overflow: hidden;
     transition: all 0.25s ease-out;
