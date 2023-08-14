@@ -139,6 +139,7 @@ hr {
 }
 
 #app {
+  padding-bottom: 5rem;
   display: grid;
   grid-template-rows: repeat(3, max-content);
   grid-template-columns: [full-s] 10rem [col-s] 1fr [col-e] 10rem [full-e];

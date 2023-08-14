@@ -4,14 +4,14 @@ const tableData = reactive({
     {
       id: "onePage",
       title: "一頁式網頁",
-      price: "$12,900",
+      price: "$16,900",
       des: "所有內容集中於一個頁面\n資訊一目瞭然",
       badge: "客製化",
     },
     {
       id: "companyWeb",
       title: "企業形象網站",
-      price: "$22,900",
+      price: "$26,900",
       des: "網路上對外的形象門面\n展現公司特色、激發潛在客戶",
       badge: "客製化",
     },

@@ -1,10 +1,29 @@
-<script setup></script>
+<script setup>
+const modeType = ref(true);
+const toggleMode = () => {
+  modeType.value = !modeType.value;
+  const root = document.querySelector("html");
+  if (root.getAttribute("theme") === "dark") {
+    root.setAttribute("theme", "");
+  } else {
+    root.setAttribute("theme", "dark");
+  }
+};
+
+const checkDom = ref(null);
+
+onMounted(() => {
+  document.addEventListener("click", () => {
+    if (checkDom.value.checked) checkDom.value.checked = false;
+  });
+});
+</script>
 
 <template>
   <header class="header__container">
     <div class="header__logo">
       <SvgIcon icon-name="logo" :icon-style="null" />
-      <h3 class="heading-3">Portfolio Website</h3>
+      <h3 class="heading-3">Portfolio</h3>
     </div>
 
     <nav class="header__nav">
@@ -41,7 +60,26 @@
       </a>
     </nav>
 
-    <input ref="checkDom" id="menu" type="checkbox" class="header__checkbox" />
+    <a class="mode__link" href="javascript:void(0)" @click="toggleMode">
+      <div :class="modeType ? 'mode__box' : 'mode__box-dark'">
+        <SvgIcon
+          icon-name="mode-sun"
+          :icon-style="{ height: '2rem', width: '2rem', fill: 'currentColor' }"
+        />
+        <SvgIcon
+          icon-name="mode-moon"
+          :icon-style="{ height: '2rem', width: '2rem', fill: 'currentColor' }"
+        />
+      </div>
+    </a>
+
+    <input
+      ref="checkDom"
+      id="menu"
+      type="checkbox"
+      class="header__checkbox"
+      @click.stop
+    />
     <label for="menu" class="header__btn">
       <SvgIcon
         icon-name="menu"
@@ -119,15 +157,44 @@
   }
 }
 
+.mode {
+  &__link {
+    overflow: hidden;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+    color: var(--p-basic-text);
+    background-color: var(--p-gray-3);
+    border-radius: 0.35rem;
+    transition: 0.25s all ease-out;
+    &:hover {
+      color: var(--p-gray-6);
+      background-color: var(--p-gray-2);
+    }
+  }
+  &__box,
+  &__box-dark {
+    display: flex;
+    height: 3rem;
+    width: 7rem;
+    gap: 1rem;
+    transition: 0.5s all ease-out;
+  }
+  &__box-dark {
+    transform: translateX(-3rem);
+  }
+}
+
 .header {
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 2rem;
   }
   &__logo {
     display: flex;
     align-items: center;
+    margin-right: auto;
     gap: 1rem;
     line-height: 1;
     svg {

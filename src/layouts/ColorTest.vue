@@ -1,23 +1,8 @@
-<script setup>
-const modeType = ref("Light");
-const toggleMode = () => {
-  modeType.value = modeType.value === "Light" ? "Dark" : "Light";
-  const root = document.querySelector("html");
-  if (root.getAttribute("theme") === "dark") {
-    root.setAttribute("theme", "");
-  } else {
-    root.setAttribute("theme", "dark");
-  }
-};
-</script>
+<script setup></script>
 
 <template>
   <section>
     <div>
-      <button type="button" @click="toggleMode">
-        {{ modeType }} Mode
-        <SvgIcon icon-name="arrow-up-right" :icon-style="null" />
-      </button>
       <h2>basic-text</h2>
       <h2>primary-color</h2>
       <h2>primary-text</h2>
@@ -72,28 +57,6 @@ h2 {
   }
   &:nth-child(5) {
     color: var(--p-secondary-text);
-  }
-}
-
-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
-  color: var(--p-basic-backgroud);
-  background-color: var(--p-primary-color);
-  border: none;
-  border-radius: 0.3rem;
-  transition: 0.25s all ease-out;
-  &:hover {
-    gap: 1rem;
-    background-color: var(--p-secondary-color);
-  }
-
-  svg {
-    height: 1.5rem;
-    width: 1.5rem;
-    fill: currentColor;
   }
 }
 

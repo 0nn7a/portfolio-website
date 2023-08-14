@@ -13,7 +13,7 @@
     <TableCompare />
 
     <p class="remark-text">以上方案均為客製化，因此皆包含「設計費用」</p>
-    <p class="remark-text">總價為未稅價、不包含每年主機承租與維護</p>
+    <p class="remark-text">總價標示為未稅價、不包含每年主機承租與維護</p>
   </section>
 </template>
 
