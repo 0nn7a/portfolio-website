@@ -178,7 +178,7 @@ onMounted(() => {
     height: 3rem;
     width: 7rem;
     gap: 1rem;
-    transition: 0.5s all ease-out;
+    transition: 0.35s all ease-out;
   }
   &__box-dark {
     transform: translateX(-3rem);

@@ -91,9 +91,10 @@ html {
 }
 
 #app {
-  position: relative;
-  height: 100vh;
+  height: calc(100vh - 9rem);
   width: 100vw;
+  margin-top: 9rem;
+  padding-bottom: 5rem;
   color: var(--p-basic-text);
   background-color: var(--p-basic-backgroud);
   overflow: hidden auto;
@@ -139,14 +140,14 @@ hr {
 }
 
 #app {
-  padding-bottom: 5rem;
+  position: relative;
   display: grid;
   grid-template-rows: repeat(3, max-content);
-  grid-template-columns: [full-s] 10rem [col-s] 1fr [col-e] 10rem [full-e];
+  grid-template-columns: [full-s] 8rem [col-s] 1fr [col-e] 8rem [full-e];
 }
 @media only screen and (min-width: 1600px) {
   #app {
-    grid-template-columns: [full-s] 15rem [col-s] 1fr [col-e] 15rem [full-e];
+    grid-template-columns: [full-s] 12rem [col-s] 1fr [col-e] 12rem [full-e];
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -181,14 +182,17 @@ hr {
 }
 
 .header__container {
-  grid-column: full-s/full-e;
-  width: 100%;
-  padding: 4rem 10rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100vw;
+  padding: 4rem 8rem;
   background-color: var(--p-gray-1);
 }
 @media only screen and (min-width: 1600px) {
   .header__container {
-    padding: 5rem 15rem;
+    padding: 5rem 12rem;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -360,6 +364,85 @@ hr {
 @media only screen and (max-width: mini-phone) {
   .heading-4 {
     font-size: 1.2rem;
+  }
+}
+.heading-5 {
+  font-size: 1.8rem;
+  color: var(--p-primary-text);
+}
+@media only screen and (min-width: 1600px) {
+  .heading-5 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .heading-5 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: tab-land) {
+  .heading-5 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .heading-5 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .heading-5 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .heading-5 {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: mini-phone) {
+  .heading-5 {
+    font-size: 1.1rem;
+  }
+}
+
+.normal-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1600px) {
+  .normal-text {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .normal-text {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: tab-land) {
+  .normal-text {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .normal-text {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: tab-port) {
+  .normal-text {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .normal-text {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: mini-phone) {
+  .normal-text {
+    font-size: 1.1rem;
   }
 }
 

@@ -1,10 +1,10 @@
 #app {
-  padding-bottom: 5rem;
+  position: relative;
   display: grid;
   grid-template-rows: repeat(3, max-content);
-  grid-template-columns: [full-s] 10rem [col-s] 1fr [col-e] 10rem [full-e];
+  grid-template-columns: [full-s] 8rem [col-s] 1fr [col-e] 8rem [full-e];
   @include respond(big-desktop) {
-    grid-template-columns: [full-s] 15rem [col-s] 1fr [col-e] 15rem [full-e];
+    grid-template-columns: [full-s] 12rem [col-s] 1fr [col-e] 12rem [full-e];
   }
   @include respond(tab-land) {
     grid-template-columns: [full-s] 6rem [col-s] 1fr [col-e] 6rem [full-e];
@@ -18,12 +18,15 @@
 }
 
 .header__container {
-  grid-column: full-s / full-e;
-  width: 100%;
-  padding: 4rem 10rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100vw;
+  padding: 4rem 8rem;
   background-color: var(--p-gray-1);
   @include respond(big-desktop) {
-    padding: 5rem 15rem;
+    padding: 5rem 12rem;
   }
   @include respond(tab-land) {
     padding: 3rem 6rem;

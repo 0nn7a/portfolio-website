@@ -40,9 +40,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 #app {
-  position: relative;
-  height: 100vh;
+  height: calc(100vh - 9rem);
   width: 100vw;
+  margin-top: 9rem;
+  padding-bottom: 5rem;
   color: var(--p-basic-text);
   background-color: var(--p-basic-backgroud);
   overflow: hidden auto;

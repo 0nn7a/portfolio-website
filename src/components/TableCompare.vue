@@ -1,56 +1,8 @@
 <script setup>
-const tableData = reactive({
-  header: [
-    {
-      id: "onePage",
-      title: "一頁式網頁",
-      price: "$16,900",
-      des: "所有內容集中於一個頁面\n資訊一目瞭然",
-      badge: "客製化",
-    },
-    {
-      id: "companyWeb",
-      title: "企業形象網站",
-      price: "$26,900",
-      des: "網路上對外的形象門面\n展現公司特色、激發潛在客戶",
-      badge: "客製化",
-    },
-  ],
-  content: {
-    基礎內容: {
-      type: "list",
-      onePage: ["5 ～ 6 個區塊", "聯絡表單"],
-      companyWeb: [
-        "首頁",
-        "一般頁面",
-        "最新消息",
-        "商品介紹",
-        "聯絡表單",
-        "後台管理系統",
-      ],
-    },
-    頁面限制: {
-      type: "text",
-      onePage: "一頁",
-      companyWeb: "無限制",
-    },
-    製作天數: {
-      type: "text",
-      onePage: "10 個工作天以上",
-      companyWeb: "需依照專案複雜度評估",
-    },
-    "RWD 支援": {
-      info: "設計不同螢幕大小下的字型、行距等版面，\n使您的網站在使用不同尺寸的裝置瀏覽時皆有合適的呈現。",
-      type: "svg",
-      onePage: "check",
-      companyWeb: "check",
-    },
-    "主機承租、維護": {
-      info: "服務包含技術諮詢、安全性維護、日常備份、系統bug移除，\n版型部分，提供簡易換圖文案修改，另內容部分皆有後台，可於日後自行新增刪除。",
-      type: "text",
-      onePage: "+ NT $4,500 / 年",
-      companyWeb: "+ NT $5,800 / 年",
-    },
+const props = defineProps({
+  tableData: {
+    type: Object,
+    default: { header: [], content: {} },
   },
 });
 </script>
@@ -62,7 +14,7 @@ const tableData = reactive({
       <tr>
         <td></td>
         <!-- 列表標題 -->
-        <th v-for="thItem in tableData.header" :key="thItem.id">
+        <th v-for="thItem in props.tableData.header" :key="thItem.id">
           <div class="table__compare__title">
             <h4 class="heading-4">{{ thItem.title }}</h4>
             <p class="same__price">{{ thItem.price }}</p>
@@ -75,16 +27,18 @@ const tableData = reactive({
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(trItem, key) in tableData.content" :key="key">
+      <tr v-for="(trItem, key) in props.tableData.content" :key="key">
         <!-- 比較標題 -->
         <td>
-          {{ key }}
+          <p class="normal-text">
+            {{ key }}
+          </p>
           <a v-if="trItem.info" class="svg-info">
             <SvgIcon
               icon-name="info-circle"
               :icon-style="{
                 height: '1.6rem',
-                width: '1.4rem',
+                width: '1.6rem',
                 fill: 'currentColor',
               }"
             >
@@ -95,10 +49,12 @@ const tableData = reactive({
           </a>
         </td>
         <!-- 比較內容 -->
-        <td v-for="tdItem in tableData.header" :key="tdItem.id">
+        <td v-for="tdItem in props.tableData.header" :key="tdItem.id">
           <!-- 清單列表類 -->
           <ul v-if="trItem.type === 'list'" class="table__compare__list">
-            <li v-for="item in trItem[tdItem.id]" :key="item">- {{ item }}</li>
+            <li v-for="item in trItem[tdItem.id]" :key="item">
+              <p class="normal-text">- {{ item }}</p>
+            </li>
           </ul>
           <!-- svg類 -->
           <SvgIcon
@@ -111,7 +67,7 @@ const tableData = reactive({
             }"
           />
           <!-- 純文字類 -->
-          <p v-else>{{ trItem[tdItem.id] }}</p>
+          <p v-else class="normal-text">{{ trItem[tdItem.id] }}</p>
         </td>
       </tr>
     </tbody>
@@ -120,7 +76,7 @@ const tableData = reactive({
   <!-- Cards | window < 655px -->
   <ul class="cards__compare">
     <li
-      v-for="card in tableData.header"
+      v-for="card in props.tableData.header"
       :key="card.id"
       class="cards__compare__item"
     >
@@ -136,7 +92,7 @@ const tableData = reactive({
       <hr />
 
       <div
-        v-for="(ctt, key) in tableData.content"
+        v-for="(ctt, key) in props.tableData.content"
         :key="key"
         class="cards__compare__content"
       >
@@ -196,7 +152,6 @@ const tableData = reactive({
 
 // Table | window >= 655px
 .table__compare {
-  margin: 3rem 0;
   border-collapse: separate;
   border-spacing: 0;
   @include respond(655px) {
@@ -205,21 +160,7 @@ const tableData = reactive({
 
   th,
   td {
-    font-size: 1.6rem;
-    font-weight: 500;
     padding: 3rem;
-    @include respond(big-desktop) {
-      font-size: 2rem;
-    }
-    @include respond(tab-land) {
-      font-size: 1.4rem;
-    }
-    @include respond(tab-port) {
-      font-size: 1.3rem;
-    }
-    @include respond(mini-phone) {
-      font-size: 1.1rem;
-    }
   }
 
   thead {
@@ -268,15 +209,17 @@ const tableData = reactive({
         vertical-align: top;
         border-top: 1px solid var(--p-gray-3);
         &:first-child {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
           padding-left: 0;
           color: var(--p-gray-6);
           .svg-info {
             position: relative;
-            display: inline-block;
-            height: 1.6rem;
-            width: 1.4rem;
+            display: flex;
+            height: 100%;
             color: var(--p-gray-6);
-            transform: translateY(16%);
+            //transform: translateY(15%);
             overflow: hidden;
             transition: all 0.25s ease-out;
             &:hover,
