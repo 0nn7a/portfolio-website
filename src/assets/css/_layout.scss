@@ -23,19 +23,20 @@
   left: 0;
   z-index: 5;
   width: 100vw;
-  padding: 4rem 8rem;
+  height: 10rem;
+  padding: 0 8rem;
   background-color: var(--p-gray-1);
   @include respond(big-desktop) {
-    padding: 5rem 12rem;
+    padding: 0 12rem;
   }
   @include respond(tab-land) {
-    padding: 3rem 6rem;
+    padding: 0 6rem;
   }
   @include respond(tab-port) {
-    padding: 3rem 4rem;
+    padding: 0 4rem;
   }
   @include respond(phone) {
-    padding: 3rem 2rem;
+    padding: 0 2rem;
   }
 }
 
