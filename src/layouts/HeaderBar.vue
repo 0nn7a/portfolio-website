@@ -84,9 +84,9 @@ onMounted(() => {
       <SvgIcon
         icon-name="menu"
         :icon-style="{
-          padding: '0.5rem',
-          height: '3.2rem',
-          width: '3.2rem',
+          padding: '0.35rem',
+          height: '3rem',
+          width: '3rem',
         }"
       />
       <nav class="header__collapse">
@@ -245,11 +245,11 @@ onMounted(() => {
   &__btn {
     position: relative;
     display: none;
-    height: 3.2rem;
-    width: 3.2rem;
+    height: 3rem;
+    width: 3rem;
     fill: var(--p-basic-text);
-    background-color: var(--p-gray-2);
-    border-radius: 0.5rem;
+    background-color: var(--p-gray-3);
+    border-radius: 0.35rem;
     overflow: hidden;
     transition: all 0.25s ease-out;
     @include respond(tab-port) {

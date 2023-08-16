@@ -43,7 +43,7 @@ const props = defineProps({
               }"
             >
             </SvgIcon>
-            <span class="popover-up-right">
+            <span class="popover-right">
               {{ trItem.info }}
             </span>
           </a>
@@ -145,8 +145,7 @@ const props = defineProps({
     }
   }
 }
-.description,
-.popover-up-right {
+.description {
   white-space: pre;
 }
 
@@ -219,7 +218,6 @@ const props = defineProps({
             display: flex;
             height: 100%;
             color: var(--p-gray-6);
-            //transform: translateY(15%);
             overflow: hidden;
             transition: all 0.25s ease-out;
             &:hover,
@@ -227,12 +225,13 @@ const props = defineProps({
             &:focus {
               color: var(--p-gray-5);
               overflow: visible;
-              .popover-up-right {
+              .popover-right {
                 opacity: 1;
               }
             }
-            .popover-up-right {
+            .popover-right {
               opacity: 0;
+              transform: translate(1rem, 1.7rem);
             }
           }
         }

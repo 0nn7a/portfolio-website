@@ -49,7 +49,13 @@ onMounted(() => {
           :key="index"
           class="add-buy__content"
         >
-          <p class="normal-text">{{ lst.item }}</p>
+          <a v-if="lst.info" href="javascript:void(0)" class="add-buy__info">
+            <p class="normal-text">{{ lst.item }}</p>
+            <span class="popover-right">
+              {{ lst.info }}
+            </span>
+          </a>
+          <p v-else class="normal-text">{{ lst.item }}</p>
           <p class="normal-text">{{ lst.amount }}</p>
         </div>
       </li>
@@ -116,7 +122,6 @@ onMounted(() => {
     );
     border: 1px solid var(--p-gray-1);
     border-radius: 1rem;
-    overflow: hidden;
     &:not(:first-child) {
       margin-top: 3rem;
       @include respond(1245px) {
@@ -142,6 +147,28 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__info {
+    position: relative;
+    overflow: hidden;
+    text-decoration: underline;
+    color: var(--p-primary-text);
+    &:hover,
+    &:active {
+      color: var(--p-gray-5);
+      overflow: visible;
+      .popover-right {
+        opacity: 1;
+      }
+    }
+    .popover-right {
+      opacity: 0;
+      text-align: justify;
+    }
+    .normal-text {
+      color: inherit;
+      transition: all 0.25s ease-out;
+    }
   }
 }
 </style>

@@ -410,6 +410,7 @@ hr {
 .normal-text {
   font-size: 1.6rem;
   font-weight: 500;
+  color: var(--p-primary-text);
 }
 @media only screen and (min-width: 1600px) {
   .normal-text {
@@ -490,41 +491,41 @@ hr {
   }
 }
 
-.popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+.popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
   font-size: 1.3rem;
 }
 @media only screen and (min-width: 1600px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
     font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 1200px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
     font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: tab-land) {
-  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
     font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 800px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
     font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: tab-port) {
-  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
     font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 320px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
     font-size: 1rem;
   }
 }
 @media only screen and (max-width: mini-phone) {
-  .popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
     font-size: 1rem;
   }
 }
@@ -545,20 +546,20 @@ hr {
   left: 0;
 }
 
-.popover-left, .popover-down-left, .popover-down, .popover-up-right, .popover-up {
+.popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up {
   position: absolute;
   z-index: 10;
   padding: 0.75rem 1rem;
   font-weight: 500;
   text-align: center;
-  white-space: nowrap;
+  white-space: pre;
   color: var(--p-gray-6);
   background-color: var(--p-basic-backgroud);
   border: 1px solid var(--p-gray-3);
   border-radius: 0.5rem;
   transition: all 0.3s ease-out 0.2s;
 }
-.popover-left::before, .popover-down-left::before, .popover-down::before, .popover-up-right::before, .popover-up::before {
+.popover-left::before, .popover-down-left::before, .popover-down::before, .popover-right::before, .popover-up::before {
   content: "";
   position: absolute;
   height: 1rem;
@@ -580,13 +581,13 @@ hr {
   transform: translate(-50%, -50%) rotate(-135deg);
 }
 
-.popover-up-right {
-  top: 0;
+.popover-right {
+  bottom: 0;
   left: 100%;
   text-align: left;
-  transform: translate(1rem, calc(-100% + 3.3rem));
+  transform: translate(1rem, 1.5rem);
 }
-.popover-up-right::before {
+.popover-right::before {
   top: 100%;
   left: 0;
   transform: translate(-50%, -300%) rotate(-45deg);

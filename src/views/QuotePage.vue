@@ -66,10 +66,18 @@ const addData = reactive({
     {
       name: "追加內容",
       list: [
-        { item: "基礎塊", amount: "$ 1,000 起" },
+        {
+          item: "基礎塊",
+          amount: "$ 1,000 起",
+          info: "在同一頁中追加單個區塊，\n再依複雜程度區分。",
+        },
         { item: "一般塊", amount: "$ 1,400 起" },
         { item: "複雜塊", amount: "$ 2,000 起" },
-        { item: "頁面", amount: "$ 2,000 起 /頁" },
+        {
+          item: "頁面",
+          amount: "$ 2,500 起",
+          info: "追加新的頁面，\n（一頁式網頁方案不可選）",
+        },
       ],
     },
     {
@@ -91,10 +99,18 @@ const addData = reactive({
     {
       name: "其他",
       list: [
-        { item: "急件", amount: "x1.2 倍" },
-        { item: "多語系", amount: "$ 1,200 /個" },
-        { item: "配色", amount: "$ 1,500 /個" },
-        { item: "大型動畫", amount: "$ 1,500 起" },
+        { item: "急件", amount: "總價 x1.2 倍" },
+        {
+          item: "多語系",
+          amount: "$ 1,200 /個",
+          info: "不含翻譯服務，\n需自行提供不同語系的內容，\n或者參考Google翻譯的正確性。",
+        },
+        { item: "主題色", amount: "$ 1,500 /個" },
+        {
+          item: "大型動畫",
+          amount: "$ 1,500 起",
+          info: "基礎動效以外，\n如整頁滾動的元素淡入淡出。",
+        },
       ],
     },
   ],
