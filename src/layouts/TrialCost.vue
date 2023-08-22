@@ -192,6 +192,7 @@ onUnmounted(() => {
         <!-- select -->
         <div v-if="list.type === 'select'" class="trial__opts">
           <button
+            type="button"
             class="trial__opts__select"
             @click="toggleShow(key)"
             @click.stop
@@ -470,6 +471,7 @@ onUnmounted(() => {
         background-color: transparent;
         border: none;
         border-bottom: 1px solid var(--p-gray-4);
+        border-radius: 0;
         outline: none;
         &:disabled {
           cursor: not-allowed;
