@@ -431,41 +431,41 @@ hr {
 }
 
 .normal-text {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 @media only screen and (min-width: 1600px) {
   .normal-text {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 @media only screen and (max-width: 1200px) {
   .normal-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: tab-land) {
   .normal-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 800px) {
   .normal-text {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: tab-port) {
   .normal-text {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 320px) {
   .normal-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: mini-phone) {
   .normal-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 

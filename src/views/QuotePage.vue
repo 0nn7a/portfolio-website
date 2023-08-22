@@ -51,7 +51,7 @@ const tableData = reactive({
       onePage: "check",
       companyWeb: "check",
     },
-    "主機承租、維護": {
+    主機承租維護: {
       info: "服務包含技術諮詢、安全性維護、日常備份、系統bug移除，\n版型部分，提供簡易換圖文案修改，另內容部分皆有後台，可於日後自行新增刪除。",
       type: "text",
       onePage: "+ NT $4,500 / 年",
