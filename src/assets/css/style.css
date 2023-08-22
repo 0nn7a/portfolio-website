@@ -8,7 +8,7 @@
   --p-primary-color: #0062ff;
   --p-primary-text: #1d1e32;
   --p-primary-lighter: #e8efff;
-  --p-primary-light: #d1e0ff;
+  --p-primary-light: #cbdbfc;
   --p-secondary-color: #38bbff;
   --p-secondary-text: #7e8ca0;
   --p-gray-1: #f3f3f7;
@@ -25,7 +25,7 @@
   --p-primary-color: #1e9bff;
   --p-primary-text: #ececf5;
   --p-primary-lighter: #2e395b;
-  --p-primary-light: #243d6e;
+  --p-primary-light: #21407e;
   --p-secondary-color: #4bc0ff;
   --p-secondary-text: #7e8ca0;
   --p-gray-1: #32343a;
@@ -126,7 +126,8 @@ h6,
 p,
 span,
 a,
-button {
+button,
+input {
   font-family: inherit;
   font-weight: inherit;
   margin: 0;
@@ -255,6 +256,12 @@ hr {
   }
 }
 
+.title-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .heading-2 {
   font-size: 2.8rem;
   letter-spacing: 0.02em;
@@ -355,32 +362,32 @@ hr {
 }
 @media only screen and (max-width: 1200px) {
   .heading-4 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: tab-land) {
   .heading-4 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 @media only screen and (max-width: 800px) {
   .heading-4 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: tab-port) {
   .heading-4 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: 320px) {
   .heading-4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: mini-phone) {
   .heading-4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 .heading-5 {
@@ -424,44 +431,47 @@ hr {
 }
 
 .normal-text {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--p-primary-text);
+  font-size: 1.4rem;
 }
 @media only screen and (min-width: 1600px) {
   .normal-text {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: 1200px) {
   .normal-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: tab-land) {
   .normal-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 800px) {
   .normal-text {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: tab-port) {
   .normal-text {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 320px) {
   .normal-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: mini-phone) {
   .normal-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
+}
+
+.normal-text {
+  font-weight: 500;
+  color: var(--p-primary-text);
 }
 
 .description {
@@ -507,42 +517,42 @@ hr {
   }
 }
 
-.popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
-  font-size: 1.3rem;
+.popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
+  font-size: 1.2rem;
 }
 @media only screen and (min-width: 1600px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
     font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 1200px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
-    font-size: 1.2rem;
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: tab-land) {
-  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
-    font-size: 1.2rem;
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 800px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
-    font-size: 1.1rem;
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: tab-port) {
-  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
-    font-size: 1.1rem;
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 320px) {
-  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
-    font-size: 1rem;
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
+    font-size: 0.9rem;
   }
 }
 @media only screen and (max-width: mini-phone) {
-  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .remark-text {
-    font-size: 1rem;
+  .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up, .hr__text, .remark-text {
+    font-size: 0.9rem;
   }
 }
 
@@ -560,6 +570,20 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.hr__text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--p-gray-5);
+}
+.hr__text::before, .hr__text::after {
+  content: "";
+  flex-grow: 1;
+  border-top: 1px solid var(--p-gray-3);
 }
 
 .popover-left, .popover-down-left, .popover-down, .popover-right, .popover-up {

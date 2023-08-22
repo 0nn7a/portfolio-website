@@ -11,7 +11,7 @@ const tableData = reactive({
     {
       id: "companyWeb",
       title: "企業形象網站",
-      price: "$27,900",
+      price: "$29,900",
       des: "網路上對外的形象門面\n展現公司特色、激發潛在客戶",
       badge: "客製化",
     },
@@ -19,7 +19,7 @@ const tableData = reactive({
   content: {
     基礎內容: {
       type: "list",
-      onePage: ["5 ～ 6 個區塊", "聯絡表單"],
+      onePage: ["5 個區塊", "聯絡表單"],
       companyWeb: [
         "首頁",
         "一般頁面",
@@ -37,8 +37,8 @@ const tableData = reactive({
     },
     頁面限制: {
       type: "text",
-      onePage: "一頁",
-      companyWeb: "無限制",
+      onePage: "1 頁",
+      companyWeb: "基礎 3 頁（加購頁面無限制）",
     },
     製作天數: {
       type: "text",
@@ -67,16 +67,27 @@ const addData = reactive({
       name: "追加內容",
       list: [
         {
-          item: "基礎塊",
-          amount: "$ 1,000 起",
-          info: "在同一頁中追加單個區塊，\n再依複雜程度區分。",
+          item: "區塊",
+          amount: "$ 2,200 起",
+          info: "一頁式網頁中追加單個區塊，\n再依複雜程度區分。",
         },
-        { item: "一般塊", amount: "$ 1,400 起" },
-        { item: "複雜塊", amount: "$ 2,000 起" },
         {
           item: "頁面",
-          amount: "$ 2,500 起",
-          info: "追加新的頁面，\n（一頁式網頁方案不可選）",
+          amount: "$ 5,400 起",
+          info: "追加新的頁面，基礎含2個區塊。\n（一頁式網頁方案不可選）",
+        },
+      ],
+    },
+    {
+      name: "功能系統",
+      list: [
+        { item: "留言板", amount: "$ 1,500 起" },
+        { item: "會員", amount: "$ 1,500 起" },
+        { item: "部落格", amount: "$ 1,500 起" },
+        {
+          item: "大型動畫",
+          amount: "$ 1,500 起",
+          info: "基礎動效以外，\n如整頁滾動的元素淡入淡出。",
         },
       ],
     },
@@ -88,29 +99,15 @@ const addData = reactive({
       ],
     },
     {
-      name: "功能系統",
-      list: [
-        { item: "留言板", amount: "$ 1,500 起" },
-        { item: "會員", amount: "$ 1,500 起" },
-        { item: "部落格", amount: "$ 1,500 起" },
-      ],
-    },
-
-    {
       name: "其他",
       list: [
-        { item: "急件", amount: "總價 x1.2 倍" },
+        { item: "急件", amount: "依需求另計" },
         {
           item: "多語系",
           amount: "$ 1,200 /個",
           info: "不含翻譯服務，\n需自行提供不同語系的內容，\n或者參考Google翻譯的正確性。",
         },
-        { item: "主題色", amount: "$ 1,500 /個" },
-        {
-          item: "大型動畫",
-          amount: "$ 1,500 起",
-          info: "基礎動效以外，\n如整頁滾動的元素淡入淡出。",
-        },
+        { item: "配色", amount: "$ 1,500 /組" },
       ],
     },
   ],
@@ -119,7 +116,7 @@ const addData = reactive({
 
 <template>
   <section class="quote__container">
-    <div class="quote__title">
+    <div class="quote__title title-layout">
       <h2 class="heading-2">網頁設計方案</h2>
       <p class="description">
         客製化設計，價格會依照版面的細膩程度而異<br />
@@ -129,9 +126,13 @@ const addData = reactive({
 
     <TableCompare :table-data="tableData" />
     <p class="remark-text">以上方案均為客製化，因此皆包含「設計費用」</p>
-    <p class="remark-text">總價標示為未稅價、不包含每年主機承租與維護</p>
+    <p class="remark-text">
+      總價標示為未稅價、不包含每年主機承租與維護等「年繳費用」
+    </p>
 
     <AddBuy :add-data="addData" />
+
+    <TrialCost />
   </section>
 </template>
 
@@ -150,6 +151,7 @@ const addData = reactive({
     @include respond(big-desktop) {
       grid-template-columns: 60% 40%;
     }
+
     :deep(.table__compare) {
       grid-column: 1 / span 1;
       margin: 3rem 0;
@@ -160,23 +162,34 @@ const addData = reactive({
     }
     .remark-text {
       grid-column: 1 / -1;
+      &:last-of-type {
+        margin-bottom: 5rem;
+      }
     }
+
     :deep(.add-buy__container) {
       grid-row: 2 / span 1;
       grid-column: 2 / span 1;
       margin: 3rem 0;
       @include respond(1000px) {
+        margin: 0;
         grid-row: 5 / span 1;
         grid-column: 1 / -1;
+      }
+    }
+
+    :deep(.trial__container) {
+      grid-row: 5 / span 1;
+      grid-column: 1 / -1;
+      padding: 5rem 0;
+      @include respond(1000px) {
+        grid-row: 6 / span 1;
       }
     }
   }
   &__title {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
 </style>

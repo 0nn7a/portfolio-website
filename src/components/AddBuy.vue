@@ -78,7 +78,7 @@ onMounted(() => {
       gap: 2rem;
     }
     @include respond(1000px) {
-      padding: 3rem 0 0;
+      padding: 5rem 0;
       border-left: none;
       border-top: 1px solid var(--p-gray-2);
     }

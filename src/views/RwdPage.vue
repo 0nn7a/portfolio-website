@@ -2,7 +2,7 @@
 
 <template>
   <section class="rwd__container">
-    <div class="rwd__title">
+    <div class="rwd__title title-layout">
       <h2 class="heading-2">什麼是 RWD 響應式網頁？</h2>
       <p class="description">
         設計不同螢幕大小下的字型、行距等版面<br />
@@ -77,10 +77,6 @@
   &__title {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
     margin-bottom: 1rem;
   }
   &__item {
