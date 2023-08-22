@@ -402,6 +402,7 @@ onUnmounted(() => {
       grid-column: 1 / -1;
       position: relative;
       padding: 0.5rem 2.5rem 0.5rem 1.25rem;
+      font-size: inherit;
       color: var(--p-primary-text);
       background-color: var(--p-basic-backgroud);
       border: 1px solid var(--p-gray-3);
@@ -462,6 +463,7 @@ onUnmounted(() => {
       justify-content: flex-start;
       align-items: center;
       gap: 0.5rem;
+      font-size: inherit;
       color: var(--p-primary-text);
       input[type="text"] {
         width: 3em;
