@@ -55,8 +55,8 @@
 </template>
 
 <style lang="scss" scoped>
-@import "/src/assets/css/variable";
-@import "/src/assets/css/mixin";
+@use "/src/assets/css/variable" as *;
+@use "/src/assets/css/mixin" as *;
 
 .heading-4 {
   color: var(--p-gray-6);
@@ -81,14 +81,13 @@
   }
   &__item {
     grid-row: 2 / span 1;
-    @include respond(655px) {
-      grid-row: auto;
-    }
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    @include respond(655px) {
+      grid-row: auto;
+    }
   }
 }
 

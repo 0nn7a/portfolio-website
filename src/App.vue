@@ -6,5 +6,5 @@
 </template>
 
 <style lang="scss" scoped>
-@import "/src/assets/css/variable";
+@use "/src/assets/css/variable" as *;
 </style>

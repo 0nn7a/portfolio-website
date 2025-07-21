@@ -137,8 +137,8 @@ const addData = reactive({
 </template>
 
 <style lang="scss" scoped>
-@import "/src/assets/css/variable";
-@import "/src/assets/css/mixin";
+@use "/src/assets/css/variable" as *;
+@use "/src/assets/css/mixin" as *;
 
 .quote {
   &__container {

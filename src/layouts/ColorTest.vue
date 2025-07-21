@@ -29,7 +29,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import "/src/assets/css/variable";
+@use "/src/assets/css/variable" as *;
 
 section {
   grid-column: full-s / full-e;
